@@ -7,6 +7,15 @@
     </head>
     <body <?php body_class(); ?>>
     <header>
-        test header
+        <i class="site-header__menu-trigger fa fa-bars" aria-hidden="true"></i>
+        <div id="logo">
+            <a href="<?php echo esc_url(site_url()) ?>"><span>McCrary <strong>Motorsports</strong></span></a>
+        </div>
+        <div id="menu">
+            <a href="<?php echo esc_url(site_url('/about'));?>"><span>About</span></a>
+            <a href="<?php echo esc_url(site_url('/services'));?>"><span>Services</span></a>
+            <a href="<?php echo esc_url(site_url('/reviews'));?>"><span>Reviews</span></a>
+            <a href="<?php echo esc_url(site_url('/contact'));?>"><span>Contact</span></a>
+        </div>
     </header>
 
