@@ -25,6 +25,18 @@ p, li{
     font-size: 18px;
 }
 
+a{
+    color: #002E7C;
+}
+
+.light-link{
+    color: #97b1ce;
+}
+
+.no-underline{
+    text-decoration: none;
+}
+
 .footer--main{
     background: linear-gradient(black, #555555);
     text-align: center;
@@ -43,6 +55,22 @@ p, li{
 
 .centered-text{
     text-align: center;
+}
+
+.right-text{
+    text-align: right;
+}
+
+.separated-text{
+    padding-top: 60px;
+}
+
+.margin-top-min{
+    margin-top: 5px;
+}
+
+.margin-bottom-min{
+    margin-bottom: 5px;
 }
 
 /* mobile------------------------------------------------------------------------------------ */

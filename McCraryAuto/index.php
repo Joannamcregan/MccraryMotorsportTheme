@@ -4,7 +4,7 @@ get_header();
 
 <div class="main">
     <div class="section"  id="about-section">
-        <h3>About</h3>
+        <a class="no-underline" href="<?php echo esc_url(site_url('/about')); ?>"><h3>About</h3></a>
         <p>
             <?php 
                 $page = get_posts([
@@ -20,12 +20,12 @@ get_header();
     </div>
     
     <div class="section" id="contact-section">
-        <h3>Contact</h3>
+        <a class="no-underline" href="<?php echo esc_url(site_url('/contact')); ?>"><h3>Contact</h3></a>
         <p class="centered-text">Call or Text <strong><?php echo get_option('phone'); ?></strong></p>
     </div>
 
     <div class="section" id="services-section">
-        <h3>Services</h3>
+        <a class="no-underline" href="<?php echo esc_url(site_url('/services')); ?>"><h3>Services</h3></a>
         <p>
             <?php
                 $args = array(
@@ -37,8 +37,9 @@ get_header();
                     echo '<ul>';
                     while ($query->have_posts()){
                         $query->the_post();
-                        echo '<a href="<?php the_permalink();?>"><li>' . get_the_title() . '</li></a>';
-                    }
+                        
+                        ?><a href="<?php the_permalink();?>"><li><?php echo get_the_title(); ?></li></a>
+                    <?php }
                     echo '</ul>';
                     wp_reset_postdata();
                     ?><p class="section--link"><a href="<?php echo esc_url(site_url('/services')); ?>"> see all </a></p><?php
@@ -48,7 +49,7 @@ get_header();
     </div>
 
     <div class="section" id="reviews-section">
-        <h3>Reviews</h3>
+        <a class="no-underline" href="<?php echo esc_url(site_url('/reviews')); ?>"><h3>Reviews</h3></a>
         <p>
             <?php
                 $args = array(
@@ -59,11 +60,11 @@ get_header();
                 if ($query->have_posts()){
                     while ($query->have_posts()){
                         $query->the_post();
-                        echo '<div class="review-excerpt">';
-                            echo '<a href="<?php the_permalink();?>"><h4>' . get_the_title() . '</h4></a>';
-                            echo '<p>' . wp_trim_words(get_the_content(), 30, '...') . '</p>';
-                            echo '<a href="<?php the_permalink();?>"><p class="review--link">' . '...read more' . '</p></a>';
-                        echo '</div>';
+                        echo '<div class="review-excerpt">';                            
+                            ?><a href="<?php the_permalink();?>"><h4><?php echo get_the_title(); ?></h4></a>
+                            <?php echo '<p>' . wp_trim_words(get_the_content(), 30, '...') . '</p>';
+                            ?><a href="<?php the_permalink();?>"><p class="review--link"> ...read more </p></a>
+                        <?php echo '</div>';
                     }
                     wp_reset_postdata();
                     ?><p class="section--link--alt"><a href="<?php echo esc_url(site_url('/reviews')); ?>"> read more reviews </a></p><?php
