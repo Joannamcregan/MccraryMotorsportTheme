@@ -9,9 +9,8 @@
     <header>
         <i class="site-header__menu-trigger fa fa-bars" aria-hidden="true"></i>        
         <!-- <i class="fa fa-window-close" aria-hidden="true"></i> -->
-        <!-- <div id="logo">
-            <a href="<?php echo esc_url(site_url()) ?>"><span>McCrary <strong>Motorsports</strong></span></a>
-        </div> -->
+        <a href="<?php echo esc_url(site_url()) ?>" id="logo"><span>McCrary <strong>Motorsports</strong></span></a>
+        <a href="<?php echo esc_url(site_url()) ?>" id="mini-logo"><span>M<strong>M</strong></span></a>
         <div id="menu">
             <a href="<?php echo esc_url(site_url('/about'));?>"><span>About</span></a>
             <a href="<?php echo esc_url(site_url('/services'));?>"><span>Services</span></a>

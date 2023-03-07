@@ -17,8 +17,13 @@ header a{
     font-size: 24px;
     display: inline-block;
     position: absolute;
-    left: 10px;
-    padding-top: 10px;
+}
+
+#mini-logo{
+    font-size: 24px;
+    display: inline-block;
+    position: absolute;
+    display: none;
 }
 
 .fa-bars{
@@ -80,6 +85,10 @@ header a{
 
 @media screen and (max-width: 1023px) {
 
+    header{
+        padding-top: 30px;
+    }
+
     .fa-bars{
         padding: 10px 20px 0 20px;
         /* border: solid pink 2px; */
@@ -90,7 +99,10 @@ header a{
 
     #logo{
         text-align: right;
-        width: 90%;
+        right: 10px;
+        top: 35px;
+        width: fit-content;
+        padding-bottom: 10px;
     }
 
     #menu{
@@ -99,5 +111,16 @@ header a{
 }
 
 @media screen and (max-width: 370px) {
+    #logo{
+        display: none;
+    }
 
+    #mini-logo{
+        text-align: right;
+        right: 20px;
+        top: 35px;
+        width: fit-content;
+        display: inline-block;
+        padding-bottom: 10px;
+    }
 }
